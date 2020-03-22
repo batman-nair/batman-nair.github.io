@@ -307,7 +307,6 @@ class Puddle {
 	this.nodeSize = 14;
 	this.mathMode = "anair";
 	this.updateLoop = undefined;
-	this.setupDefaultOptions();
     }
     setNodeStyle(nodeStyle) {
 	if (nodeStyle === "water")
@@ -349,6 +348,7 @@ class Puddle {
     }
     setupGrid() {
 	clearInterval(this.updateLoop);
+	this.setupDefaultOptions();
 	this.data.refresh(this.numRows, this.numCols);
 
 	this.parentNode.innerHTML = '';
