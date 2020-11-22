@@ -3,7 +3,7 @@
   <head>
     <title>Arjun Nair</title>
     <meta name="title" content="Arjun Nair">
-    <meta name="description" content="Portfolio site of Software Developer Arjun Nair">
+    <meta name="description" content="Title site of software developer Arjun Nair">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
@@ -29,8 +29,9 @@
 	  transform: translate(-50%, -50%);
 	  width: 70vw;
 	  height: 70vh;
+	  line-height: 4.5em;
 	  max-height: 40em;
-	  background: rgba(255, 255, 255, 0.7);
+	  background: rgba(255, 255, 255, 0.2);
 	  border-radius: 5px;
 	  z-index: 1;
 	  color: #011627;
@@ -46,6 +47,7 @@
 	  margin-top: 2em;
       }
       .site-title {
+	  margin-top: 2em;
 	  display: block;
 	  font-size: 2em;
       }
@@ -59,7 +61,7 @@
       }
       .header-icons a {
 	  text-decoration: none;
-	  font-size: 2em;
+	  font-size: 2.5em;
 	  padding: 0.5em;
 	  transition: 0.3s;
 	  color: #011627;
@@ -114,21 +116,14 @@
       <div class="content-container">
 	<div class="content">
 	  <h1>
-	    <span class="site-pre-title"> I’m </span>
 	    <span class="site-title"> Arjun Nair </span>
 	    <span class="site-description"> Software Developer </span>
 	  </h1>
 	  <div class="header-icons">
-	    <a id="gmail" aria-label="Send email" href="mailto:someone@example.com"><i class="icon fa fa-envelope"></i></a>
+	    <a id="gmail" aria-label="Send email" href="mailto:mail@batmannair.com"><i class="icon fa fa-envelope"></i></a>
 	    <a id="twitter" aria-label="My Twitter" target="_blank" href="https://twitter.com/batman_nair_"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
 	    <a id="github" aria-label="My Github" target="_blank" href="https://github.com/batman-nair"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
 	    <a id="linkedin" aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/arjun-nair-dev/"><i class="icon fa fa-linkedin" aria-hidden="true"></i></a>
-	  </div>
-
-	  <div class="puddle-buttons">
-	    <a id="water-button">Water</a>
-	    <a id="ascii-button">Ascii</a>
-	    <a id="party-button">Party</a>
 	  </div>
 
 	</div>
@@ -144,11 +139,11 @@
       let isTouchDevice = window.mobileAndTabletcheck();
 
       var puddle = new Puddle("#puddle-container");
-      puddle.setNodeStyle("ascii");
+      puddle.setNodeStyle("water");
       puddle.setRandomRippleGenerationInterval(300);
       puddle.toggleRandomRipples();
       puddle.setupGrid();
-      let defaultMathMode = "anair";
+      let defaultMathMode = "helias";
       let defaultMaxRippleStrength = 100;
       if (isTouchDevice) { // Better mobile default options
 	  defaultMathMode = "helias";
@@ -157,19 +152,6 @@
 	  puddle.setMaxRippleStrength(defaultMaxRippleStrength);
 	  puddle.toggleRippleOnMove();
       }
-
-      let waterButton = document.getElementById("water-button");
-      let asciiButton = document.getElementById("ascii-button");
-      let partyButton = document.getElementById("party-button");
-      waterButton.onclick = () => {
-	  puddle.setNodeStyle("water");
-      };
-      asciiButton.onclick = () => {
-	  puddle.setNodeStyle("ascii");
-      };
-      partyButton.onclick = () => {
-	  puddle.setNodeStyle("party");
-      };
 
       window.onresize = () => puddle.setupGrid();
 
