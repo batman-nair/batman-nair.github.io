@@ -9,6 +9,4 @@ Feel free to edit and use it.
 
 ## Screenshots
 
-![Screenshot ASCII](screencaps/ascii_screencap.png)
-![Screenshot WATER](screencaps/water_screencap.png)
-![Screenshot PARTY](screencaps/party_screencap.png)
+![Screenshot ASCII](screencaps/site_screencap.gif)
