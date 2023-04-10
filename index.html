@@ -34,14 +34,15 @@
     }
     .content-container {
       position: absolute;
+      display: flex;
+      align-items: center;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 70vw;
       height: 70vh;
-      padding: 2em;
-      line-height: 4.5em;
-      max-height: 40em;
+      padding: 2rem;
+      max-height: 40rem;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 5px;
       z-index: 1;
@@ -52,35 +53,31 @@
       text-align: center;
       margin: 0 auto;
     }
-    .site-pre-title {
-      display: block;
-      font-size: 1em;
-      margin-top: 2em;
-    }
     .site-title {
-      margin-top: 2em;
+      margin-top: 2rem;
       display: block;
-      font-size: 2em;
+      font-size: 2rem;
     }
     .site-description {
       display: block;
-      font-size: 1.2em;
-      margin-top: 0.5em;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
     .header-icons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      max-width: 80em;
-      margin: 4em auto;
+      max-width: 80rem;
+      margin: 4rem auto;
     }
     .header-icons a {
       flex: 0 0 auto;
-      width: 50%;
-      max-width: 15em;
+      padding: 1rem;
+      margin: 0.5rem;
+      max-width: 15rem;
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       font-weight: bold;
       transition: 0.3s;
       color: #011627;
@@ -178,19 +175,17 @@
   <div class="body-wrapper">
     <div class="content-container">
       <div class="content">
-        <h2>
-          <span class="site-title"> Hey, I'm Arjun Nair </span>
-          <span class="site-description">What would you like to know?</span>
-        </h2>
+        <h2 class="site-title">Hey, I'm Arjun Nair</h2>
+        <h4 class="site-description">What would you like to know?</h4>
         <div class="header-icons">
           <a id="github" aria-label="My Github" target="_blank" href="https://github.com/batman-nair" class="social-link">
             <i class="icon fa fa-github-alt" aria-hidden="true"></i> See projects? </a>
           <a id="twitter" aria-label="My Twitter" target="_blank" href="https://twitter.com/batman_nair_" class="social-link">
             <i class="icon fa fa-twitter" aria-hidden="true"></i> Follow chirps?</a>
-          <a id="gmail" aria-label="Send email" href="mailto:mail@batmannair.com" class="social-link">
-            <i class="icon fa fa-envelope"></i> Email me?</a>
           <a id="linkedin" aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/arjun-nair-dev/" class="social-link">
             <i class="icon fa fa-linkedin" aria-hidden="true"></i> Professional FB?</a>
+          <a id="gmail" aria-label="Send email" href="mailto:mail@batmannair.com" class="social-link">
+            <i class="icon fa fa-envelope"></i> Email me?</a>
         </div>
 
       </div>
