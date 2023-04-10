@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Arjun Nair</title>
   <meta name="title" content="Arjun Nair">
   <meta name="description" content="Title site of software developer Arjun Nair">
@@ -35,6 +39,7 @@
       transform: translate(-50%, -50%);
       width: 70vw;
       height: 70vh;
+      padding: 2em;
       line-height: 4.5em;
       max-height: 40em;
       background: rgba(255, 255, 255, 0.2);
@@ -67,13 +72,15 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 2em;
+      max-width: 80em;
+      margin: 4em auto;
     }
     .header-icons a {
       flex: 0 0 auto;
       width: 50%;
-      max-width: 20rem;
+      max-width: 15em;
       text-decoration: none;
+      font-size: 1.2em;
       font-weight: bold;
       transition: 0.3s;
       color: #011627;
@@ -96,6 +103,18 @@
           var(--twitter-color),
           rgba(0,0,0,0) 75%
         ) 1 0%;
+    }
+    #twitter i {
+      color: var(--twitter-color);
+    }
+    #github i {
+      color: var(--github-color);
+    }
+    #gmail i {
+      color: var(--gmail-color);
+    }
+    #linkedin i {
+      color: var(--linkedin-color);
     }
     #gmail {
       border-image:
@@ -164,12 +183,12 @@
           <span class="site-description">What would you like to know?</span>
         </h2>
         <div class="header-icons">
-          <a id="gmail" aria-label="Send email" href="mailto:mail@batmannair.com" class="social-link">
-            <i class="icon fa fa-envelope"></i> Email me?</a>
-          <a id="twitter" aria-label="My Twitter" target="_blank" href="https://twitter.com/batman_nair_" class="social-link">
-            <i class="icon fa fa-twitter" aria-hidden="true"></i> Follow chirps?</a>
           <a id="github" aria-label="My Github" target="_blank" href="https://github.com/batman-nair" class="social-link">
             <i class="icon fa fa-github-alt" aria-hidden="true"></i> See projects? </a>
+          <a id="twitter" aria-label="My Twitter" target="_blank" href="https://twitter.com/batman_nair_" class="social-link">
+            <i class="icon fa fa-twitter" aria-hidden="true"></i> Follow chirps?</a>
+          <a id="gmail" aria-label="Send email" href="mailto:mail@batmannair.com" class="social-link">
+            <i class="icon fa fa-envelope"></i> Email me?</a>
           <a id="linkedin" aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/arjun-nair-dev/" class="social-link">
             <i class="icon fa fa-linkedin" aria-hidden="true"></i> Professional FB?</a>
         </div>
