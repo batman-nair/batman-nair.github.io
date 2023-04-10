@@ -10,6 +10,12 @@
 </head>
 <body>
   <style>
+    :root {
+      --github-color: #6f42c1;
+      --twitter-color: #1DA1F2;
+      --linkedin-color: #0e76a8;
+      --gmail-color: #c71610;
+    }
     body, head {
       margin: 0;
       font-family: "Fira Mono", monospace;
@@ -56,53 +62,91 @@
       font-size: 1.2em;
       margin-top: 0.5em;
     }
+
     .header-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin-top: 2em;
     }
     .header-icons a {
+      flex: 0 0 auto;
+      width: 50%;
+      max-width: 20rem;
       text-decoration: none;
-      font-size: 2.5em;
-      padding: 0.5em;
+      font-weight: bold;
       transition: 0.3s;
       color: #011627;
+      display: inline-block;
+      border-bottom: 1px;
+      border-bottom-style: solid;
+      border-image:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0) 25%,
+          blue, rgba(0,0,0,0) 75%
+        ) 1 0%;
+    }
+
+    #twitter {
+      border-image:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0) 25%,
+          var(--twitter-color),
+          rgba(0,0,0,0) 75%
+        ) 1 0%;
+    }
+    #gmail {
+      border-image:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0) 25%,
+          var(--gmail-color),
+          rgba(0,0,0,0) 75%
+        ) 1 0%;
     }
     #twitter:hover {
-      color: #1DA1F2;
+      color: var(--twitter-color);
+      border-image:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0),
+          var(--twitter-color),
+          rgba(0,0,0,0)
+        ) 1 0%;
     }
     #gmail:hover {
-      color: #c71610;
+      color: var(--gmail-color);
+      border-image:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0),
+          var(--gmail-color),
+          rgba(0,0,0,0)
+        ) 1 0%;
     }
     #github:hover {
-      color: #6f42c1;
+      color: var(--github-color);
+      border-image:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0),
+          var(--github-color),
+          rgba(0,0,0,0)
+        ) 1 0%;
     }
     #linkedin:hover {
-      color: #0e76a8;
+      color: var(--linkedin-color);
+      border-image:
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0),
+          var(--linkedin-color),
+          rgba(0,0,0,0)
+        ) 1 0%;
     }
-    .puddle-buttons {
-      margin-top: 3.5em;
-    }
-    .puddle-buttons a {
-      text-decoration: none;
-      font-size: 1.1em;
-      padding: 10px 15px;
-      margin: 1.5em;
-      border-radius: 5px;
-      border: 1px solid black;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    #water-button:hover {
-      background: #2DB0C4;
-      color: white;
-    }
-    #ascii-button:hover {
-      background: #011627;
-      color: white;
-    }
-    #party-button:hover {
-      background: #f10018;
-      color: white;
-    }
+
     #puddle-container {
       position: absolute;
       top: 0;
@@ -116,14 +160,18 @@
     <div class="content-container">
       <div class="content">
         <h2>
-          <span class="site-title"> Hi, I'm Arjun Nair </span>
-          <span class="site-description"> Find my projects on Github, links below. </span>
+          <span class="site-title"> Hey, I'm Arjun Nair </span>
+          <span class="site-description">What would you like to know?</span>
         </h2>
         <div class="header-icons">
-          <a id="gmail" aria-label="Send email" href="mailto:mail@batmannair.com"><i class="icon fa fa-envelope"></i></a>
-          <a id="twitter" aria-label="My Twitter" target="_blank" href="https://twitter.com/batman_nair_"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
-          <a id="github" aria-label="My Github" target="_blank" href="https://github.com/batman-nair"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-          <a id="linkedin" aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/arjun-nair-dev/"><i class="icon fa fa-linkedin" aria-hidden="true"></i></a>
+          <a id="gmail" aria-label="Send email" href="mailto:mail@batmannair.com" class="social-link">
+            <i class="icon fa fa-envelope"></i> Email me?</a>
+          <a id="twitter" aria-label="My Twitter" target="_blank" href="https://twitter.com/batman_nair_" class="social-link">
+            <i class="icon fa fa-twitter" aria-hidden="true"></i> Follow chirps?</a>
+          <a id="github" aria-label="My Github" target="_blank" href="https://github.com/batman-nair" class="social-link">
+            <i class="icon fa fa-github-alt" aria-hidden="true"></i> See projects? </a>
+          <a id="linkedin" aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/arjun-nair-dev/" class="social-link">
+            <i class="icon fa fa-linkedin" aria-hidden="true"></i> Professional FB?</a>
         </div>
 
       </div>
@@ -147,7 +195,7 @@
     let defaultMaxRippleStrength = 100;
     if (isTouchDevice) { // Better mobile default options
       defaultMathMode = "helias";
-      defaultMaxRippleStrength = 250;
+      defaultMaxRippleStrength = 500;
       puddle.setMathMode(defaultMathMode);
       puddle.setMaxRippleStrength(defaultMaxRippleStrength);
       puddle.toggleRippleOnMove();
