@@ -8,5 +8,5 @@ Uses [Puddle.js](https://github.com/batman-nair/puddle.js) as background for aes
 Feel free to edit and use it.
 
 ## Screenshots
-
-![Screenshot ASCII](screencaps/site_screencap.gif)
+(2020/11/22)
+![Site Screencap](screencaps/site_screencap.gif)
